@@ -1,0 +1,343 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:radial-gradient(circle at top,#050816,#02030d);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+nav h2{
+    color:#3d8bff;
+    font-size:30px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#4da3ff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    padding-top:140px;
+    text-align:center;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-box{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    padding:10px;
+    background:linear-gradient(45deg,#3d8bff,#7b4dff);
+    box-shadow:0 0 40px #3d8bff;
+    animation:spin 10s linear infinite;
+}
+
+.profile-img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:url('./me pics.jpeg') center/cover;
+    border:8px solid #050816;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero-text h1{
+    font-size:75px;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.1;
+}
+
+.hero-text p{
+    margin-top:15px;
+    font-size:25px;
+    color:#b9c7ff;
+}
+
+/* ================= PROJECT SECTION ================= */
+
+.projects{
+    margin-top:80px;
+    text-align:center;
+}
+
+.projects h2{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    width:320px;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+    box-shadow:0 0 15px rgba(61,139,255,0.2);
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.03);
+    box-shadow:0 0 35px #3d8bff;
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#b9c7ff;
+    line-height:1.6;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:12px;
+    background:linear-gradient(90deg,#3d8bff,#7b4dff);
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* ================= MAGIC BUTTON ================= */
+
+.interactive-buttons{
+    margin-top:50px;
+    text-align:center;
+}
+
+.magic-btn{
+    padding:15px 45px;
+    border:none;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(90deg,#3d8bff,#c23dff);
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(61,139,255,0.5);
+    transition:0.3s;
+}
+
+.magic-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* ================= PORTFOLIO ================= */
+
+.animated-portfolio{
+    margin-top:100px;
+    text-align:center;
+}
+
+.animated-portfolio h2{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.slider{
+    display:flex;
+    overflow-x:auto;
+    gap:25px;
+    padding:20px;
+}
+
+.slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.slider::-webkit-scrollbar-thumb{
+    background:#3d8bff;
+    border-radius:10px;
+}
+
+.portfolio-card{
+    min-width:300px;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:15px;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.portfolio-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #3d8bff;
+}
+
+.portfolio-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.portfolio-card h3{
+    margin-top:15px;
+    font-size:24px;
+}
+
+.portfolio-card p{
+    margin-top:10px;
+    color:#b9c7ff;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+    margin-top:100px;
+    text-align:center;
+    padding:20px;
+}
+
+.contact-section h2{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.contact-box{
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.contact-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #3d8bff;
+}
+
+.contact-box h3{
+    color:#4da3ff;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#d9e6ff;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:40px;
+    margin-top:80px;
+    color:#8899cc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-text h1{
+        font-size:45px;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .profile-box{
+        width:240px;
+        height:240px;
+    }
+
+}
